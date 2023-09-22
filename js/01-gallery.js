@@ -19,6 +19,15 @@ const gallery = galleryItems.map((image) => `
 // event.preventDefault();
 // });
 galleryElement.innerHTML = gallery.join('');
-galleryElement.addEventListener("click", selectImage);
+galleryElement.addEventListener("click", (event) => {
+event.preventDefault();
+if (event.target.nodeName !== "IMG") {
+  return;
+}
+const selectedImage = event.target.dataset.dataSource;
+console.log(selectedImage);
+});
 
-console.log(galleryItems);
+
+
+
