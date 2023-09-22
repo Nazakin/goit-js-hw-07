@@ -12,7 +12,13 @@ const gallery = galleryItems.map((image) => `
     />
   </a>
 </li>
-`)
+`);
+
+ //const link = document.querySelector('.gallery__link');
+ // link.addEventListener("click", function(event){
+// event.preventDefault();
+// });
 galleryElement.innerHTML = gallery.join('');
+galleryElement.addEventListener("click", selectImage);
 
 console.log(galleryItems);
