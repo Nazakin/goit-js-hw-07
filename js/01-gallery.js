@@ -1,6 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
-
+import * as basicLightbox from 'basiclightbox'
 const galleryElement = document.querySelector('.gallery');
 const gallery = galleryItems.map((image) => `
 <li class="gallery__item">
@@ -26,6 +26,13 @@ if (event.target.nodeName !== "IMG") {
   return;
 }
 const selectedImage = event.target.dataset.source;
+
+
+const instance = basicLightbox.create(`
+    <img src="${selectedImage}" width="800" height="600">
+`)
+
+instance.show()
 
 });
 
