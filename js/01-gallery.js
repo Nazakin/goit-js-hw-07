@@ -1,5 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
+
 const galleryElement = document.querySelector('.gallery');
 const gallery = galleryItems.map((image) => `
 <li class="gallery__item">
@@ -24,8 +25,8 @@ event.preventDefault();
 if (event.target.nodeName !== "IMG") {
   return;
 }
-const selectedImage = event.target.dataset.dataSource;
-console.log(selectedImage);
+const selectedImage = event.target.dataset.source;
+
 });
 
 
