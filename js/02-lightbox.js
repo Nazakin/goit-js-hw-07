@@ -15,10 +15,8 @@ galleryElement.addEventListener("click", (event) => {
     event.preventDefault();
     return;
   }
-  const selectedImage = event.target.dataset.source;
-  const lightbox = new SimpleLightbox(selectedImage);
-  lightbox.open();
-}
+const selectedImage = event.target.dataset.source;
+
 
 
 });
