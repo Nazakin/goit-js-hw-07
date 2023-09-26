@@ -21,9 +21,7 @@ if (event.target.nodeName !== "IMG") {
 }
 const selectedImage = event.target.dataset.source;
 const instance = basicLightbox.create(`
-    <div class="modal">
     <img src="${selectedImage}" alt="${event.target.alt}" class="modal_image">
-    </div>
 `)
 
 instance.show()

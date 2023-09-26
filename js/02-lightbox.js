@@ -13,4 +13,5 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captions: true,
   captionDelay: 250,
   captionsData: "alt",
+  // overlayOpacity: 0.7,
 });
